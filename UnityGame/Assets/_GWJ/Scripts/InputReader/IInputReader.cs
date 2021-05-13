@@ -14,13 +14,13 @@ namespace InputReader
 		bool Jumping { get; }
         bool OffJump { get; }
 
-        bool OnTool { get; }
-		bool Tooling { get; }
-        bool OffTool { get; }
+        bool OnRoll { get; }
+		bool Rooling { get; }
+        bool OffRool { get; }
 
-		bool OnNotify{ get; }
-		bool Notifing{ get; }
-		bool OffNotify{ get; }
+		bool OnAttack{ get; }
+		bool Attacking{ get; }
+		bool OffAttack{ get; }
 
 		void ButtonInput();
 

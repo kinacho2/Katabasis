@@ -6,27 +6,27 @@ namespace InputReader
 {
     public class AirconsoleController : InputReaderKey
     {
-        public AirconsoleController(string xAxis, string yAxis, KeyCode interact, KeyCode jump, KeyCode tool, KeyCode notify)
+        public AirconsoleController(string xAxis, string yAxis, KeyCode interact, KeyCode jump, KeyCode roll, KeyCode attack)
         {
-            _interactKey = jump;
-            _jumpKey = interact;
-            _toolKey = jump;
-            _notifyKey = notify;
+            _interactKey = interact;
+            _jumpKey = jump;
+            _rollKey = roll;
+            _attackKey = attack;
             _xAxis = xAxis;
             _yAxis = yAxis;
         }
-        private bool _OnInteract;
-        private bool _Interacting;
-        private bool _OffInteract;
-        private bool _OnJump;
-        private bool _Jumping;
-        private bool _OffJump;
-        private bool _OnTool;
-        private bool _Tooling;
-        private bool _OffTool;
-        private bool _OnNotify;
-        private bool _Notifing;
-        private bool _OffNotify;
+        protected bool _OnInteract;
+        protected bool _Interacting;
+        protected bool _OffInteract;
+        protected bool _OnJump;
+        protected bool _Jumping;
+        protected bool _OffJump;
+        protected bool _OnRoll;
+        protected bool _Rolling;
+        protected bool _OffRoll;
+        protected bool _OnAttack;
+        protected bool _Attacking;
+        protected bool _OffAttack;
 
         public override bool OnInteract
         {
@@ -76,50 +76,50 @@ namespace InputReader
             }
         }
 
-        public override bool OnTool
+        public override bool OnRoll
         {
             get
             {
-                if (_OnTool)
-                    _Tooling = true;
-                bool toret = _OnTool;
-                _OnTool = false;
+                if (_OnRoll)
+                    _Rolling = true;
+                bool toret = _OnRoll;
+                _OnRoll = false;
                 return toret;
             }
         }
 
-        public override bool Tooling => _Tooling;
+        public override bool Rooling => _Rolling;
 
-        public override bool OffTool
+        public override bool OffRool
         {
             get
             {
-                bool toret = _OffTool;
-                _OffTool = false;
+                bool toret = _OffRoll;
+                _OffRoll = false;
                 return toret;
             }
         }
 
-        public override bool OnNotify
+        public override bool OnAttack
         {
             get
             {
-                if (_OnNotify)
-                    _Notifing = true;
-                bool toret = _OnNotify;
-                _OnNotify = false;
+                if (_OnAttack)
+                    _Attacking = true;
+                bool toret = _OnAttack;
+                _OnAttack = false;
                 return toret;
             }
         }
 
-        public override bool Notifing => _Notifing;
+        public override bool Attacking => _Attacking;
 
-        public override bool OffNotify
+        public override bool OffAttack
         {
             get
             {
-                bool toret = _OffNotify;
-                _OffNotify = false;
+                bool toret = _OffAttack;
+                _OffAttack = false;
                 return toret;
             }
         }
@@ -143,8 +143,8 @@ namespace InputReader
                 if (Input.GetKeyDown(_interactKey))
                 {
                     _OnInteract = true;
-                    _OnTool = true;
-                    _OffTool = false;
+                    _OnRoll = true;
+                    _OffRoll = false;
                     _OffInteract = false;
                 }
                 if (Input.GetKeyUp(_interactKey))
@@ -152,23 +152,23 @@ namespace InputReader
                     _OnInteract = false;
                     _Interacting = false;
                     _OffInteract = true;
-                    _OnTool = false;
-                    _OffTool = true;
-                    _Tooling = false;
+                    _OnRoll = false;
+                    _OffRoll = true;
+                    _Rolling = false;
                 }
             }
 
             {
-                if (Input.GetKeyDown(_notifyKey))
+                if (Input.GetKeyDown(_attackKey))
                 {
-                    _OnNotify = true;
-                    _OffNotify = false;
+                    _OnAttack = true;
+                    _OffAttack = false;
                 }
-                if (Input.GetKeyUp(_notifyKey))
+                if (Input.GetKeyUp(_attackKey))
                 {
-                    _OnNotify = false;
-                    _OffNotify = true;
-                    _Notifing = false;
+                    _OnAttack = false;
+                    _OffAttack = true;
+                    _Attacking = false;
                 }
             }
 

@@ -14,8 +14,8 @@ namespace InputReader
         {
             _interactKey = KeyCode.JoystickButton0;
             _jumpKey = KeyCode.JoystickButton1;
-            _toolKey = KeyCode.JoystickButton2;
-            _toolKey = KeyCode.JoystickButton3;
+            _rollKey = KeyCode.JoystickButton2;
+            _rollKey = KeyCode.JoystickButton3;
             _xAxis = "Joystick1Horizontal";
             _yAxis = "Joystick1Vertical";
         }
@@ -24,8 +24,8 @@ namespace InputReader
         {
             _interactKey = interact;
             _jumpKey = jump;
-            _toolKey = tool;
-            _notifyKey = notify;
+            _rollKey = tool;
+            _attackKey = notify;
             _xAxis = xAxis;
             _yAxis = yAxis;
         }

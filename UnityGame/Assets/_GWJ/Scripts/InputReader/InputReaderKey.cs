@@ -10,9 +10,9 @@ namespace InputReader
     {
 
         protected KeyCode _interactKey;
-        protected KeyCode _notifyKey;
+        protected KeyCode _attackKey;
         protected KeyCode _jumpKey;
-        protected KeyCode _toolKey;
+        protected KeyCode _rollKey;
         protected string _xAxis;
         protected string _yAxis;
 
@@ -21,8 +21,8 @@ namespace InputReader
         {
             _interactKey = KeyCode.Space;
             _jumpKey = KeyCode.K;
-            _toolKey = KeyCode.L;
-            _notifyKey = KeyCode.J;
+            _rollKey = KeyCode.L;
+            _attackKey = KeyCode.J;
             _xAxis = "KeyboardHorizontal";
             _yAxis = "KeyboardVertical";
         }
@@ -33,8 +33,8 @@ namespace InputReader
 			
             _interactKey = interact;
             _jumpKey = jump;
-            _toolKey = tool;
-            _notifyKey = notify;
+            _rollKey = tool;
+            _attackKey = notify;
             _xAxis = xAxis;
             _yAxis = yAxis;
         }
@@ -60,13 +60,13 @@ namespace InputReader
         public virtual bool Jumping => Input.GetKey(_jumpKey);
         public virtual bool OffJump => Input.GetKeyUp(_jumpKey);
 
-        public virtual bool OnTool => Input.GetKeyDown(_toolKey);
-        public virtual bool Tooling => Input.GetKey(_toolKey);
-        public virtual bool OffTool => Input.GetKeyUp(_toolKey);
+        public virtual bool OnRoll => Input.GetKeyDown(_rollKey);
+        public virtual bool Rooling => Input.GetKey(_rollKey);
+        public virtual bool OffRool => Input.GetKeyUp(_rollKey);
 
-        public virtual bool OnNotify => Input.GetKeyDown(_notifyKey);
-        public virtual bool Notifing => Input.GetKey(_notifyKey);
-        public virtual bool OffNotify => Input.GetKeyUp(_notifyKey);
+        public virtual bool OnAttack => Input.GetKeyDown(_attackKey);
+        public virtual bool Attacking => Input.GetKey(_attackKey);
+        public virtual bool OffAttack => Input.GetKeyUp(_attackKey);
 
         public virtual void ButtonInput()
         {

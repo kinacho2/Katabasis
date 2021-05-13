@@ -13,7 +13,7 @@ namespace InputReader
         {
             _interactKey = KeyCode.Space;
             _jumpKey = KeyCode.K;
-            _toolKey = KeyCode.L;
+            _rollKey = KeyCode.L;
             _xAxis = "KeyboardHorizontal";
             _yAxis = "KeyboardVertical";
         }
@@ -22,8 +22,8 @@ namespace InputReader
         {
             _interactKey = interact;
             _jumpKey = jump;
-            _toolKey = tool;
-            _notifyKey = notify;
+            _rollKey = tool;
+            _attackKey = notify;
             _xAxis = xAxis;
             _yAxis = yAxis;
         }

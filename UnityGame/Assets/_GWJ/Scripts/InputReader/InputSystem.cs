@@ -4,16 +4,25 @@ namespace InputReader
 {
     public static class InputSystem 
     {
-        public static IInputReader KeyboardTesting(string xAxis, string yAxis, KeyCode interact, KeyCode jump, KeyCode tool, KeyCode notify) => new KeyboardInput(xAxis,yAxis,interact,jump,tool, notify);
+        public static IInputReader KeyboardTesting(string xAxis, string yAxis, KeyCode interact, KeyCode jump, KeyCode roll, KeyCode attack) => new AirconsoleController(xAxis,yAxis,interact,jump,roll, attack);
         public static IInputReader KeyboardTesting() => new AirconsoleController(
             "KeyboardHorizontal", 
             "KeyboardVertical", 
+            KeyCode.F, 
             KeyCode.Space, 
-            KeyCode.H, 
-            KeyCode.K, 
-            KeyCode.L);
-		
-        public static IInputReader Joy1Testing(string xAxis, string yAxis, KeyCode interact, KeyCode jump, KeyCode tool, KeyCode notify) => new JoyInput(xAxis,yAxis,interact,jump,tool, notify);
+            KeyCode.Mouse1, 
+            KeyCode.Mouse0);
+
+        public static IInputReader KeyboardMouseTesting(string xAxis, string yAxis, KeyCode interact, KeyCode jump, KeyCode roll, KeyCode attack) => new AirconsoleController(xAxis, yAxis, interact, jump, roll, attack);
+        public static IInputReader KeyboardMouseTesting() => new AirconsoleController(
+            "KeyboardMouseHorizontal",
+            "KeyboardMouseVertical",
+            KeyCode.F,
+            KeyCode.Space,
+            KeyCode.Mouse1,
+            KeyCode.Mouse0);
+
+        public static IInputReader Joy1Testing(string xAxis, string yAxis, KeyCode interact, KeyCode jump, KeyCode roll, KeyCode attack) => new AirconsoleController(xAxis,yAxis,interact,jump,roll, attack);
         
         public static IInputReader Joy1Testing() =>  new AirconsoleController(
                             "Joystick1Horizontal",

@@ -7,6 +7,9 @@ public abstract class CharacterInput : MonoBehaviour
 {
 
     public IInputReader inputReader;
-            
 
+    protected void Update()
+    {
+        inputReader.ButtonInput();
+    }
 }
