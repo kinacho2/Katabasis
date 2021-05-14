@@ -5,7 +5,7 @@ using UnityEngine;
 public interface ICharacterState 
 {
 
-    void Update();
+    void CustomUpdate();
 
     void StateEnter(ICharacterState prevState);
 

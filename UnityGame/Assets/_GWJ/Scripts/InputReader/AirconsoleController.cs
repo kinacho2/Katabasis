@@ -135,6 +135,7 @@ namespace InputReader
                 if (Input.GetKeyUp(_jumpKey))
                 {
                     _OffJump = true;
+                    _OnJump = false;
                     _Jumping = false;
                 }
             }
@@ -143,8 +144,6 @@ namespace InputReader
                 if (Input.GetKeyDown(_interactKey))
                 {
                     _OnInteract = true;
-                    _OnRoll = true;
-                    _OffRoll = false;
                     _OffInteract = false;
                 }
                 if (Input.GetKeyUp(_interactKey))
@@ -152,6 +151,17 @@ namespace InputReader
                     _OnInteract = false;
                     _Interacting = false;
                     _OffInteract = true;
+                }
+            }
+
+            {
+                if (Input.GetKeyDown(_rollKey))
+                {
+                    _OnRoll = true;
+                    _OffRoll = false;
+                }
+                if (Input.GetKeyUp(_rollKey))
+                {
                     _OnRoll = false;
                     _OffRoll = true;
                     _Rolling = false;
