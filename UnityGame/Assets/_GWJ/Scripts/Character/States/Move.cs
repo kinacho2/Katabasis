@@ -49,11 +49,9 @@ public class Move : GroundedState
 
         }
 
-
-
         UpdateMove(deltaTime);
 
-        if (!Character.Grounded)
+        if (!Character.Collider.Bottom)
             EndState();
 
     }

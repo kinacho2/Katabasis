@@ -9,16 +9,16 @@ public class ToppedDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Character.Topped = true;
+        //Character.Topped = true;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Character.Topped = true;
+       // Character.Topped = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Character.Topped = false;
+        //Character.Topped = false;
     }
 }

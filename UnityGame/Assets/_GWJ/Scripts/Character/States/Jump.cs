@@ -67,7 +67,7 @@ public class Jump : AirState
 
         distance += deltaTime * Character.Velocity.y;
 
-        if (Character.Velocity.y <= 0.1f || Character.Topped)
+        if (Character.Velocity.y <= 0.1f || Character.Collider.Top)
         {
             //Debug.LogError("End Jump por speed");
             Character.Velocity.y = 1;

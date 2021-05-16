@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public bool Grounded;
-    public bool Topped;
+    public ColliderInteractions Collider;
 
     public Vector3 Velocity;
 

@@ -9,16 +9,16 @@ public class GroundedDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Character.Grounded = true;
+       // Character.Grounded = true;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Character.Grounded = true;
+        //Character.Grounded = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Character.Grounded = false;
+       // Character.Grounded = false;
     }
 }

@@ -8,7 +8,7 @@ public class Idle : GroundedState
     {
         base.CustomUpdate(deltaTime);
 
-        if (Character.Grounded)
+        if (Character.Collider.Bottom)
             UpdateMove(deltaTime);
         else
             EndState();

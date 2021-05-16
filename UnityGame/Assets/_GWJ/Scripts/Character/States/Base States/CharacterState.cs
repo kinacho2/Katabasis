@@ -92,13 +92,24 @@ public abstract class CharacterState : MonoBehaviour
         {
             float x = vel.x;
             vel.x += Mathf.Sign(-vel.x) * Statistics.Friction*deltaTime;
-            if(Mathf.Sign(vel.x)!= Mathf.Sign(x))
+
+            if(Vector3.Dot(vel, transform.right) > 0 && Character.Collider.Right)
+            {
+                vel.x = 0;
+            }
+            if (Vector3.Dot(vel, transform.right) < 0 && Character.Collider.Left)
+            {
+                vel.x = 0;
+            }
+
+            if (Mathf.Sign(vel.x)!= Mathf.Sign(x))
                 vel.x = 0;
         }
         else
         {
             vel.x = 0;
         }
+        
 
         vel.x = Mathf.Clamp(vel.x, -Character.Statistics.Speed.x, Character.Statistics.Speed.x);
         vel.y = Mathf.Clamp(vel.y, -Statistics.Speed.y, Statistics.Speed.y);

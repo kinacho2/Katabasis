@@ -7,7 +7,7 @@ public class FallAfterAirJump : AirState
     public override void CustomUpdate(float deltaTime)
     {
         UpdateMove(deltaTime);
-        if (Character.Grounded)
+        if (Character.Collider.Bottom)
             EndState();
     }
 }
