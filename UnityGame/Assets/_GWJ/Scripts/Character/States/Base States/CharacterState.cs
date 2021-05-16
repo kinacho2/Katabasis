@@ -8,6 +8,8 @@ public abstract class CharacterState : MonoBehaviour
 
     [SerializeField] protected CharacterState PrevState;
 
+    [SerializeField] string AnimatorTrigger;
+
     [SerializeField] protected CharacterState End;
     [SerializeField] protected CharacterState Move;
     [SerializeField] protected CharacterState Jump;
@@ -26,7 +28,10 @@ public abstract class CharacterState : MonoBehaviour
         if (Character.Joystick.inputReader.OnJump)
             Character.ChangeState(Jump);
         if (Character.Joystick.inputReader.OnAttack)
+        {
+            Debug.LogError("ATAQUE!!!!!");
             Character.ChangeState(Attack);
+        }
         if (Character.Joystick.inputReader.OnRoll)
             Character.ChangeState(Roll);
         if (Mathf.Abs(Character.Joystick.inputReader.Stick.x) > .1f)
@@ -38,6 +43,7 @@ public abstract class CharacterState : MonoBehaviour
         PrevState = prevState;
         if (prevState != null)
             prevState.StateExit();
+        Character.Animator.SetTrigger(AnimatorTrigger);
     }
 
     public virtual void StateExit()
@@ -113,7 +119,6 @@ public abstract class CharacterState : MonoBehaviour
 
         vel.x = Mathf.Clamp(vel.x, -Character.Statistics.Speed.x, Character.Statistics.Speed.x);
         vel.y = Mathf.Clamp(vel.y, -Statistics.Speed.y, Statistics.Speed.y);
-
 
         Character.Velocity = vel;
     }

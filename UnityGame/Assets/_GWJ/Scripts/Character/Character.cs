@@ -9,6 +9,7 @@ public class Character : MonoBehaviour
     public Vector3 Velocity;
 
     [SerializeField] public CharacterInput Joystick;
+    [SerializeField] public SpriteRenderer Renderer;
     [SerializeField] public Animator Animator;
     [SerializeField] public Rigidbody2D Rigidbody;
     [SerializeField] public CharacterState State;
@@ -37,6 +38,14 @@ public class Character : MonoBehaviour
            // Rigidbody.MovePosition(transform.position + new Vector3(0, Velocity.y * Time.fixedDeltaTime, 0));
         }
 
+    }
+
+    private void Update()
+    {
+        if (Joystick.inputReader.Stick.x > 0)
+            Renderer.flipX = false;
+        if (Joystick.inputReader.Stick.x < 0)
+            Renderer.flipX = true;
     }
 
 
