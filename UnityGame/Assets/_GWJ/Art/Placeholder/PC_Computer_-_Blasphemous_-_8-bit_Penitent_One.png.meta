@@ -706,8 +706,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 103
-        width: 56
-        height: 37
+        width: 30
+        height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -831,9 +831,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 47
-        width: 56
-        height: 56
+        y: 52
+        width: 23
+        height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -851,10 +851,10 @@ TextureImporter:
       name: PC_Computer_-_Blasphemous_-_8-bit_Penitent_One_24
       rect:
         serializedVersion: 2
-        x: 56
-        y: 47
-        width: 56
-        height: 56
+        x: 60
+        y: 52
+        width: 23
+        height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -872,10 +872,10 @@ TextureImporter:
       name: PC_Computer_-_Blasphemous_-_8-bit_Penitent_One_25
       rect:
         serializedVersion: 2
-        x: 112
-        y: 47
-        width: 56
-        height: 56
+        x: 120
+        y: 52
+        width: 24
+        height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -893,10 +893,10 @@ TextureImporter:
       name: PC_Computer_-_Blasphemous_-_8-bit_Penitent_One_26
       rect:
         serializedVersion: 2
-        x: 168
-        y: 47
-        width: 56
-        height: 56
+        x: 180
+        y: 52
+        width: 24
+        height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -914,10 +914,10 @@ TextureImporter:
       name: PC_Computer_-_Blasphemous_-_8-bit_Penitent_One_27
       rect:
         serializedVersion: 2
-        x: 224
-        y: 47
-        width: 56
-        height: 56
+        x: 239
+        y: 52
+        width: 24
+        height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -935,10 +935,10 @@ TextureImporter:
       name: PC_Computer_-_Blasphemous_-_8-bit_Penitent_One_28
       rect:
         serializedVersion: 2
-        x: 280
-        y: 47
-        width: 56
-        height: 56
+        x: 299
+        y: 52
+        width: 24
+        height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -956,10 +956,10 @@ TextureImporter:
       name: PC_Computer_-_Blasphemous_-_8-bit_Penitent_One_29
       rect:
         serializedVersion: 2
-        x: 336
-        y: 47
-        width: 56
-        height: 56
+        x: 359
+        y: 51
+        width: 24
+        height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -977,10 +977,10 @@ TextureImporter:
       name: PC_Computer_-_Blasphemous_-_8-bit_Penitent_One_30
       rect:
         serializedVersion: 2
-        x: 392
-        y: 47
-        width: 56
-        height: 56
+        x: 419
+        y: 51
+        width: 24
+        height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

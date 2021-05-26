@@ -16,6 +16,8 @@ public abstract class CharacterState : MonoBehaviour
     [SerializeField] protected CharacterState Roll;
     [SerializeField] protected CharacterState Attack;
 
+    [SerializeField] protected CharacterState Hurt;
+
     [SerializeField] protected Statistics Statistics;
 
     public virtual void Init(Character character)
@@ -28,10 +30,7 @@ public abstract class CharacterState : MonoBehaviour
         if (Character.Joystick.inputReader.OnJump)
             Character.ChangeState(Jump);
         if (Character.Joystick.inputReader.OnAttack)
-        {
-            Debug.LogError("ATAQUE!!!!!");
             Character.ChangeState(Attack);
-        }
         if (Character.Joystick.inputReader.OnRoll)
             Character.ChangeState(Roll);
         if (Mathf.Abs(Character.Joystick.inputReader.Stick.x) > .1f)
@@ -44,6 +43,8 @@ public abstract class CharacterState : MonoBehaviour
         if (prevState != null)
             prevState.StateExit();
         Character.Animator.SetTrigger(AnimatorTrigger);
+        
+
     }
 
     public virtual void StateExit()
@@ -122,4 +123,11 @@ public abstract class CharacterState : MonoBehaviour
 
         Character.Velocity = vel;
     }
+
+    public virtual bool Damage()
+    {
+        Character.ChangeState(Hurt);
+        return true;
+    }
+
 }

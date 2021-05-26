@@ -5,11 +5,28 @@ using UnityEngine;
 public class Attack: GroundedState
 {
     [SerializeField] AnimatorEvent AnimatorEvent;
+
+    [SerializeField] SubAttack[] List;
+
+    [SerializeField] int index = 0;
+
+    [SerializeField] float StepCooldown = .6f;
+
+    bool flag = false;
+
+    float timer = 0;
+
     public override void StateEnter(CharacterState prevState)
     {
-        Character.Velocity = Vector3.zero;
         AnimatorEvent.SetCallback(EndState);
-        base.StateEnter(prevState);
+        
+        Character.ChangeState(List[index]);
+        
+        Character.Velocity = Vector3.zero;
+        index = (index + 1) % List.Length;
+        timer = 0;
+
+        //base.StateEnter(prevState);
     }
 
     public override void CustomUpdate(float deltaTime)
@@ -22,12 +39,28 @@ public class Attack: GroundedState
     {
         AnimatorEvent.SetCallback(null);//TODO TENE CUIDADO CON ESTO!!!
         base.EndState();
+        flag = true;
     }
 
-    public override void UpdateMove(float deltaTime)
+   
+
+    private void Update()
     {
-        Character.Velocity += new Vector3(0, Character.Statistics.Gravity, 0)
-                                        * deltaTime;
-        base.UpdateMove(deltaTime);
+        if (flag)
+        {
+            timer += Time.deltaTime;
+            if (timer > StepCooldown)
+            {
+                index = 0;
+                flag = false;
+                
+            }
+        }
     }
+
+    public override bool Damage()
+    {
+        return false;
+    }
+
 }

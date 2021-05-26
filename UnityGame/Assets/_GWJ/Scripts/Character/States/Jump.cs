@@ -13,6 +13,7 @@ public class Jump : AirState
         //V0 =- Mathf.Sqrt(2 * Statistics.JumpHeight * Statistics.Acceleration);
     }
 
+    bool semaphore;
 
     public override void StateEnter(CharacterState prevState)
     {
@@ -37,42 +38,52 @@ public class Jump : AirState
     public override void CustomUpdate(float deltaTime)
     {
         if (Character.Joystick.inputReader.OnJump)
+        {
             Character.ChangeState(Jump);
+            semaphore = true;
+
+        }
         if (Character.Joystick.inputReader.OnAttack)
+        {
             Character.ChangeState(Attack);
-
-        if (Character.Joystick.inputReader.Jumping)
+            semaphore = true;
+        }
+        if (!semaphore)
         {
-
-            if (!jumping)
+            if (Character.Joystick.inputReader.Jumping)
             {
-                jumping = true;
-                Character.Velocity += new Vector3(0, V0, 0);
-                V0 = 0;
+
+                if (!jumping)
+                {
+                    jumping = true;
+                    Character.Velocity += new Vector3(0, V0, 0);
+                    V0 = 0;
+                }
+                else
+                {
+                    Character.Velocity += new Vector3(0, Character.Statistics.Gravity, 0)
+                                            * deltaTime;
+                }
+
+
             }
-            else
+            if (!Character.Joystick.inputReader.Jumping || distance > Statistics.JumpHeight)
             {
-                Character.Velocity += new Vector3(0, Character.Statistics.Gravity, 0)
-                                        * deltaTime;
+                jumping = false;
             }
-            
 
-        }
-        if (!Character.Joystick.inputReader.Jumping || distance > Statistics.JumpHeight)
-        {
-            jumping = false;
-        }
-        
-        UpdateMove(deltaTime);
+            UpdateMove(deltaTime);
 
-        distance += deltaTime * Character.Velocity.y;
+            distance += deltaTime * Character.Velocity.y;
 
-        if (Character.Velocity.y <= 0.1f || Character.Collider.Top)
-        {
-            //Debug.LogError("End Jump por speed");
-            Character.Velocity.y = 1;
-            EndState();
+            if (Character.Velocity.y <= 0.1f || Character.Collider.Top)
+            {
+                //Debug.LogError("End Jump por speed");
+                Character.Velocity.y = 1;
+                EndState();
+            }
         }
+        semaphore = false;
     }
 
     public override void UpdateMove(float deltaTime)
@@ -86,9 +97,10 @@ public class Jump : AirState
         //velocity.y = 0;
         //if(setVelocity0)
            // Character.Rigidbody.velocity = velocity;
+
         base.EndState();
         jumping = false;
         //Character.Rigidbody.gravityScale = 1;
-        Character.ChangeState(End);
+        //Character.ChangeState(End);
     }
 }
