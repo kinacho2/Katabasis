@@ -1,37 +1,22 @@
 fileFormatVersion: 2
-guid: 1d9f2c64f794fab44957c6fbdce6ca14
+guid: 6d7d84c5605dc0f4f9801da86cbca063
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1966381394238714707
-    second: player 1_0
+      213: 497481414094151050
+    second: SaltoCaida_0
   - first:
-      213: 7739705705965561783
-    second: player 1_1
+      213: 4247926841595492765
+    second: SaltoCaida_1
   - first:
-      213: -323923702803852719
-    second: player 1_2
+      213: -549179050126149341
+    second: SaltoCaida_2
   - first:
-      213: -4086137826902552895
-    second: player 1_3
+      213: 6534954482945587742
+    second: SaltoCaida_3
   - first:
-      213: 8451971427814365250
-    second: player 1_4
-  - first:
-      213: 6773842640136104239
-    second: player 1_5
-  - first:
-      213: -9152539377618561481
-    second: player 1_6
-  - first:
-      213: 6761919623801217293
-    second: player 1_7
-  - first:
-      213: -640956431769204717
-    second: player 1_8
-  - first:
-      213: 4161333873428345252
-    second: player 1_9
+      213: 4535421745304382861
+    second: SaltoCaida_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -95,7 +80,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
@@ -107,7 +92,7 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
@@ -119,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player 1_0
+      name: SaltoCaida_0
       rect:
         serializedVersion: 2
         x: 0
@@ -133,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dacc67f4a8206b4e0800000000000000
-      internalID: -1966381394238714707
+      spriteID: a8dd079d5b867e600800000000000000
+      internalID: 497481414094151050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_1
+      name: SaltoCaida_1
       rect:
         serializedVersion: 2
         x: 32
@@ -154,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b724263555f86b60800000000000000
-      internalID: 7739705705965561783
+      spriteID: d997529b4faa3fa30800000000000000
+      internalID: 4247926841595492765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_2
+      name: SaltoCaida_2
       rect:
         serializedVersion: 2
         x: 64
@@ -175,17 +160,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1521c08cb11318bf0800000000000000
-      internalID: -323923702803852719
+      spriteID: 329f427409ce068f0800000000000000
+      internalID: -549179050126149341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_3
+      name: SaltoCaida_3
       rect:
         serializedVersion: 2
-        x: 97
+        x: 96
         y: 0
         width: 32
         height: 32
@@ -196,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cecf24bb4f1b47c0800000000000000
-      internalID: -4086137826902552895
+      spriteID: e1a71538a72d0ba50800000000000000
+      internalID: 6534954482945587742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player 1_4
+      name: SaltoCaida_4
       rect:
         serializedVersion: 2
         x: 128
@@ -217,113 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24850aeab3f6b4570800000000000000
-      internalID: 8451971427814365250
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player 1_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.85}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f29e4b9edf5810e50800000000000000
-      internalID: 6773842640136104239
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player 1_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.85}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7365544ade5abf080800000000000000
-      internalID: -9152539377618561481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player 1_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.85}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d012a68521a27dd50800000000000000
-      internalID: 6761919623801217293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player 1_8
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.85}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31805ef658dda17f0800000000000000
-      internalID: -640956431769204717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player 1_9
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.85}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a13f753c1700c930800000000000000
-      internalID: 4161333873428345252
+      spriteID: d8d23733c0e01fe30800000000000000
+      internalID: 4535421745304382861
       vertices: []
       indices: 
       edges: []
