@@ -1,43 +1,37 @@
 fileFormatVersion: 2
-guid: c51fb69f254c15f43818bbca34c8860e
+guid: b4ea4e79380c07f4eba3fd9e40d14f41
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2220331149991164371
-    second: Salto sprite 1_0
+      213: -8838569255352728309
+    second: player 1-sheet_0
   - first:
-      213: -6146540035768254591
-    second: Salto sprite 1_1
+      213: -7730721361885466131
+    second: player 1-sheet_1
   - first:
-      213: 6176178893692336104
-    second: Salto sprite 1_2
+      213: -746670552506572100
+    second: player 1-sheet_2
   - first:
-      213: -1468440451976541097
-    second: Salto sprite 1_3
+      213: 5584870299225289428
+    second: player 1-sheet_3
   - first:
-      213: 2985281712627917574
-    second: Salto sprite 1_4
+      213: -1548484518655622254
+    second: player 1-sheet_4
   - first:
-      213: -4812515016386230035
-    second: Salto sprite 1_5
+      213: -1378643562781008518
+    second: player 1-sheet_5
   - first:
-      213: 2242413976291384461
-    second: Salto sprite 1_6
+      213: -2473152848483678608
+    second: player 1-sheet_6
   - first:
-      213: -8064865537564478187
-    second: Salto sprite 1_7
+      213: -5347273569968248294
+    second: player 1-sheet_7
   - first:
-      213: 8070729747397428512
-    second: Salto sprite 1_8
+      213: 6110178622443903592
+    second: player 1-sheet_8
   - first:
-      213: -3151397160504909685
-    second: Salto sprite 1_9
-  - first:
-      213: -6237801379177937115
-    second: Salto sprite 1_10
-  - first:
-      213: -8279773328692264943
-    second: Salto sprite 1_11
+      213: -2752001706623214911
+    second: player 1-sheet_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -125,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Salto sprite 1_0
+      name: player 1-sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -139,14 +133,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d935f6ca6330de10800000000000000
-      internalID: 2220331149991164371
+      spriteID: b05030c4718175580800000000000000
+      internalID: -8838569255352728309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Salto sprite 1_1
+      name: player 1-sheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -160,14 +154,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18ff05a376a13baa0800000000000000
-      internalID: -6146540035768254591
+      spriteID: de1fa4761e5f6b490800000000000000
+      internalID: -7730721361885466131
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Salto sprite 1_2
+      name: player 1-sheet_2
       rect:
         serializedVersion: 2
         x: 64
@@ -181,14 +175,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e7fbc32bf136b550800000000000000
-      internalID: 6176178893692336104
+      spriteID: cb2e999a61b43a5f0800000000000000
+      internalID: -746670552506572100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Salto sprite 1_3
+      name: player 1-sheet_3
       rect:
         serializedVersion: 2
         x: 96
@@ -202,14 +196,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75ccf16603d0f9be0800000000000000
-      internalID: -1468440451976541097
+      spriteID: 4d2f3fd72f1718d40800000000000000
+      internalID: 5584870299225289428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Salto sprite 1_4
+      name: player 1-sheet_4
       rect:
         serializedVersion: 2
         x: 128
@@ -223,8 +217,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60328a3a6e9dd6920800000000000000
-      internalID: 2985281712627917574
+      spriteID: 2930755d88da28ae0800000000000000
+      internalID: -1548484518655622254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 1-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d1f88ebf21edce0800000000000000
+      internalID: -1378643562781008518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 1-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07682ee66989dadd0800000000000000
+      internalID: -2473152848483678608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 1-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a2539e40baac5b0800000000000000
+      internalID: -5347273569968248294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 1-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a54f08517bbc450800000000000000
+      internalID: 6110178622443903592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 1-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca547f470deec9d0800000000000000
+      internalID: -2752001706623214911
       vertices: []
       indices: 
       edges: []
