@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class CharacterState : MonoBehaviour
+public abstract class CharacterState : MonoBehaviour, IState
 {
     protected Character Character;
 
-    [SerializeField] protected CharacterState PrevState;
+    [SerializeField] protected IState PrevState;
 
     [SerializeField] string AnimatorTrigger;
 
@@ -37,7 +37,7 @@ public abstract class CharacterState : MonoBehaviour
             Character.ChangeState(Move);
     }
 
-    public virtual void StateEnter(CharacterState prevState)
+    public virtual void StateEnter(IState prevState)
     {
         PrevState = prevState;
         if (prevState != null)
@@ -55,31 +55,6 @@ public abstract class CharacterState : MonoBehaviour
     public virtual void EndState()
     {
         Character.ChangeState(End);
-    }
-
-    public virtual void DoMove(float deltaTime)
-    {
-        float deltaSpeed = Character.Joystick.inputReader.Stick.x * Statistics.Acceleration * deltaTime;
-
-        if(Vector2.Dot(new Vector2(deltaSpeed, 0), Character.Rigidbody.velocity) < 0)
-        {
-            deltaSpeed += deltaSpeed;
-        }
-
-        if(Mathf.Abs(Character.Joystick.inputReader.Stick.x) < 0.1f 
-            && Mathf.Abs(Character.Rigidbody.velocity.x) > 0.1f)
-        {
-            deltaSpeed = - Mathf.Sign(Character.Rigidbody.velocity.x) * Statistics.Acceleration * deltaTime;
-        }
-
-        Vector2 velocity = Character.Rigidbody.velocity + new Vector2(deltaSpeed, 0);
-
-        velocity.x = Mathf.Clamp(velocity.x, -Statistics.Speed.x, Statistics.Speed.x);
-
-        if (Vector2.Dot(Character.Rigidbody.velocity, velocity) < 0)
-            velocity.x = 0;
-
-        Character.Rigidbody.velocity = velocity;
     }
 
     public virtual void UpdateMove(float deltaTime)
@@ -124,8 +99,13 @@ public abstract class CharacterState : MonoBehaviour
         Character.Velocity = vel;
     }
 
-    public virtual bool Damage()
+    public virtual bool Damage(Vector3 position)
     {
+        Character.Direction = new Vector2(
+            
+            Mathf.Sign(position.x - Character.transform.position.x)
+            
+            , 0);
         Character.ChangeState(Hurt);
         return true;
     }

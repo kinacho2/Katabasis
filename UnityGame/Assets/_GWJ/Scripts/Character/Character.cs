@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public class Character : Entity
 {
     public ColliderInteractions Collider;
 
@@ -11,17 +11,10 @@ public class Character : MonoBehaviour
     public Vector2 Direction;
 
     [SerializeField] public CharacterInput Joystick;
-    [SerializeField] public SpriteRenderer Renderer;
-
+   
     [SerializeField] InvulnerabilityState InvulnerabilityState;
-    public void Hurt()
-    {
-        if (!InvulnerabilityState.Invulnerability)
-        {
-            InvulnerabilityState.Invulnerability = State.Damage();
-        }
-    }
 
+    [SerializeField] public SpriteRenderer Renderer;
     [SerializeField] public Animator Animator;
     [SerializeField] public Rigidbody2D Rigidbody;
     [SerializeField] public CharacterState State;
@@ -35,7 +28,6 @@ public class Character : MonoBehaviour
             var s = State;
             st.StateEnter(s);
             State = st;
-            Debug.LogError("State" + st.name);
 
         }
     }
@@ -49,24 +41,36 @@ public class Character : MonoBehaviour
         {
 
             transform.position = transform.position + Velocity * Time.fixedDeltaTime;
-           // Rigidbody.MovePosition(transform.position + new Vector3(0, Velocity.y * Time.fixedDeltaTime, 0));
+       
         }
-
+        Rigidbody.velocity = Vector2.zero;
     }
-
+    public override bool Hurt(float value, Vector3 position)
+    {
+        if (!InvulnerabilityState.Invulnerability)
+        {
+            InvulnerabilityState.Invulnerability = State.Damage(position);
+            if (InvulnerabilityState.Invulnerability)
+                return base.Hurt(value, position);
+        }
+        return false;
+        
+    }
     private void Update()
     {
         if (Joystick.inputReader.Stick.x > 0)
         {
-            Renderer.flipX = false;
+            //Renderer.flipX = false;
             Direction = new Vector2(1, 0);
         }
         if (Joystick.inputReader.Stick.x < 0)
         {
-            Renderer.flipX = true;
+            //Renderer.flipX = true;
             Direction = new Vector2(-1, 0);
         }
-        
+
+        Renderer.flipX = (Direction.x < 0);
+
 
     }
 

@@ -16,7 +16,7 @@ public class Attack: GroundedState
 
     float timer = 0;
 
-    public override void StateEnter(CharacterState prevState)
+    public override void StateEnter(IState prevState)
     {
         AnimatorEvent.SetCallback(EndState);
         
@@ -58,7 +58,7 @@ public class Attack: GroundedState
         }
     }
 
-    public override bool Damage()
+    public override bool Damage(Vector3 position)
     {
         return false;
     }

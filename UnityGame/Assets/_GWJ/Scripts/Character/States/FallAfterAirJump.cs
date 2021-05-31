@@ -13,13 +13,6 @@ public class FallAfterAirJump : AirState
         MoveFriction = Statistics.Friction;
     }
 
-    public override void StateEnter(CharacterState prevState)
-    {
-        base.StateEnter(prevState);
-        if (name == "FallAfterAirJump")
-            Debug.LogError("previo " + prevState.name);
-    }
-
     public override void CustomUpdate(float deltaTime)
     {
         base.CustomUpdate(deltaTime);

@@ -2,27 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AirHurt : CharacterState
+public class GusanoHurt : EnemyState
 {
     [SerializeField] Vector2 retroceso;
-
-
     public override void StateEnter(IState prevState)
     {
-        prevState.EndState();
         base.StateEnter(prevState);
+        Enemy.Direction = Vector3.zero;
+    }
+    public override bool Damage(Vector3 position)
+    {
+        Enemy.Direction = new Vector3(
+            Mathf.Sign( transform.position.x - position.x ) * retroceso.x,
+            retroceso.y, 0
 
-        Vector2 dir = Character.Direction;
-        Character.Velocity = (-dir * retroceso.x + new Vector2(0, 1) * retroceso.y);
+            );
+
+        return true;
 
     }
 
     public override void CustomUpdate(float deltaTime)
     {
         base.CustomUpdate(deltaTime);
-        UpdateMove(deltaTime);
-
-        if (Character.Collider.Bottom)
+        if (Enemy.Direction.y < 0)
             EndState();
     }
 

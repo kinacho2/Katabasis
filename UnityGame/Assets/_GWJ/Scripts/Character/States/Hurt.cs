@@ -10,7 +10,7 @@ public class Hurt : GroundedState
     [SerializeField] float StuntTime = 1;
     [SerializeField] Vector2 retroceso;
     
-    public override void StateEnter(CharacterState prevState)
+    public override void StateEnter(IState prevState)
     {
         prevState.EndState();
         base.StateEnter(prevState);

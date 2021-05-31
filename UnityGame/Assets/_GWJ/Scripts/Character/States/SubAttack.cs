@@ -11,7 +11,7 @@ public class SubAttack : GroundedState
         base.UpdateMove(deltaTime);
     }
 
-    public override bool Damage()
+    public override bool Damage(Vector3 position)
     {
         return false;
     }

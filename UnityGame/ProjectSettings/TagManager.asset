@@ -15,8 +15,8 @@ TagManager:
   - 
   - PlayerColliders
   - Level
-  - 
-  - 
+  - EnemyColliders
+  - Enemy
   - 
   - 
   - 

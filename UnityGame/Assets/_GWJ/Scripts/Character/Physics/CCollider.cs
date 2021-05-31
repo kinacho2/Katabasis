@@ -11,7 +11,7 @@ public class CCollider : MonoBehaviour
 
     [SerializeField] bool Horizontal;//no es top o bot
     [SerializeField] bool Opposite;//Izquierda y Abajo
-
+    [SerializeField] bool Resize = true;
     private void Awake()
     {
         ThisCollider = GetComponent<BoxCollider2D>();
@@ -19,6 +19,7 @@ public class CCollider : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!Resize) return;
         Vector3 offset = MainCollider.offset * MainCollider.transform.localScale;
         Vector3 pos = MainCollider.transform.position;
         Vector3 size = MainCollider.size * MainCollider.transform.localScale;

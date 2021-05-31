@@ -15,24 +15,13 @@ public class Jump : AirState
 
     bool semaphore;
 
-    public override void StateEnter(CharacterState prevState)
+    public override void StateEnter(IState prevState)
     {
-        //jumpForce = CalculateJumpForce(Physics2D.gravity.magnitude, 5.0f);
         V0 = Mathf.Sqrt(2 * Statistics.JumpAcceleration * Character.Statistics.Gravity);
-       // V1 = Mathf.Sqrt(2 * Statistics.JumpAcceleration * Physics2D.gravity.magnitude * Character.Rigidbody.gravityScale) *counter;
 
         base.StateEnter(prevState);
 
-        //Speed = new Vector2(0, V0);
-        //Vector2 velocity = Character.Rigidbody.velocity;
-        //velocity.y = 0;
-        //Character.Rigidbody.velocity = velocity + Speed;
-        //Character.Rigidbody.gravityScale = 0;
-        
-        Debug.LogError("Velocity: " + Character.Velocity);
-
         distance = 0;
-        //Character.Rigidbody.AddForce(Vector2.up * V0 * Character.Rigidbody.mass, ForceMode2D.Impulse);
     }
 
     public override void CustomUpdate(float deltaTime)
@@ -40,13 +29,15 @@ public class Jump : AirState
         if (Character.Joystick.inputReader.OnJump)
         {
             Character.ChangeState(Jump);
-            semaphore = true;
+            //semaphore = true;
+            return;
 
         }
         if (Character.Joystick.inputReader.OnAttack)
         {
             Character.ChangeState(Attack);
-            semaphore = true;
+            return;
+            //semaphore = true;
         }
         if (!semaphore)
         {
