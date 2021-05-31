@@ -1,28 +1,22 @@
 fileFormatVersion: 2
-guid: 7eadb3d8c225f6048bf656c25fee2b33
+guid: f58feffcc43e9ee4ebf39c693b408699
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8713120321045492238
-    second: Sprite-0001-Sheet_0
+      213: 7476143000221377255
+    second: fall-Sheet_0
   - first:
-      213: 7900860951653682938
-    second: Sprite-0001-Sheet_1
+      213: 4904929164101489645
+    second: fall-Sheet_1
   - first:
-      213: 583417684835264956
-    second: Sprite-0001-Sheet_2
+      213: -5680819627396639960
+    second: fall-Sheet_2
   - first:
-      213: -7474615155744080074
-    second: Sprite-0001-Sheet_3
+      213: 6953353588735484400
+    second: fall-Sheet_3
   - first:
-      213: 4952637736013467042
-    second: Sprite-0001-Sheet_4
-  - first:
-      213: -3980355551068045990
-    second: Sprite-0001-Sheet_5
-  - first:
-      213: -5889849262404765700
-    second: Sprite-0001-Sheet_6
+      213: -5406412045819068658
+    second: fall-Sheet_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -110,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite-0001-Sheet_0
+      name: fall-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e02772594c83be870800000000000000
-      internalID: 8713120321045492238
+      spriteID: 7e2e73ac27890c760800000000000000
+      internalID: 7476143000221377255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-0001-Sheet_1
+      name: fall-Sheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -145,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afe821bcc2f75ad60800000000000000
-      internalID: 7900860951653682938
+      spriteID: de319ba561fc11440800000000000000
+      internalID: 4904929164101489645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-0001-Sheet_2
+      name: fall-Sheet_2
       rect:
         serializedVersion: 2
         x: 64
@@ -166,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb969441b47b81800800000000000000
-      internalID: 583417684835264956
+      spriteID: 823d4fba5aca921b0800000000000000
+      internalID: -5680819627396639960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-0001-Sheet_3
+      name: fall-Sheet_3
       rect:
         serializedVersion: 2
         x: 96
@@ -187,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63f7f193e15d44890800000000000000
-      internalID: -7474615155744080074
+      spriteID: 0f1244e9f364f7060800000000000000
+      internalID: 6953353588735484400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-0001-Sheet_4
+      name: fall-Sheet_4
       rect:
         serializedVersion: 2
         x: 128
@@ -208,50 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ad074cd7cd4bb440800000000000000
-      internalID: 4952637736013467042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-0001-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.85}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5db5d217bfe2c8c0800000000000000
-      internalID: -3980355551068045990
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-0001-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.85}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf774c53d4d034ea0800000000000000
-      internalID: -5889849262404765700
+      spriteID: e0fbf8383e098f4b0800000000000000
+      internalID: -5406412045819068658
       vertices: []
       indices: 
       edges: []
