@@ -214,69 +214,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Attack 2-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 364
-        y: 0
-        width: 91
-        height: 57
-      alignment: 9
-      pivot: {x: 0.4, y: 0.48}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8249252fdd91e8960800000000000000
-      internalID: 7606045261719311400
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack 2-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 455
-        y: 0
-        width: 91
-        height: 57
-      alignment: 9
-      pivot: {x: 0.4, y: 0.48}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6bbbd3622f4bb82e0800000000000000
-      internalID: -2122403847258391626
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack 2-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 546
-        y: 0
-        width: 91
-        height: 57
-      alignment: 9
-      pivot: {x: 0.4, y: 0.48}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7fe1199b09a2f6660800000000000000
-      internalID: 7381165115360485111
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
