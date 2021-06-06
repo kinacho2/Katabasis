@@ -68,8 +68,11 @@ public class Character : Entity
             //Renderer.flipX = true;
             Direction = new Vector2(-1, 0);
         }
-
-        Renderer.flipX = (Direction.x < 0);
+        var rot = transform.rotation;
+        var rt = rot.eulerAngles;
+        rt.y = (Direction.x < 0) ? 180: 0;
+        rot.eulerAngles = rt;
+        transform.rotation = rot;
 
 
     }

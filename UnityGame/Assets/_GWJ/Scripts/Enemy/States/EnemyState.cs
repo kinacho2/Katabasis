@@ -24,11 +24,11 @@ public class EnemyState : MonoBehaviour, IState
             vel += new Vector3(0, -Enemy.Gravity, 0)
                 * deltaTime;
 
-            vel.y = Mathf.Clamp(vel.y, -2, 2);
+            vel.y = Mathf.Clamp(vel.y, -5, 5);
         }
         else
         {
-            vel.y = Mathf.Clamp(vel.y, 0, 2);
+            vel.y = Mathf.Clamp(vel.y, 0, 5);
         }
         Enemy.Direction = vel;
     }

@@ -31,6 +31,7 @@ public class Attack: GroundedState
 
     public override void CustomUpdate(float deltaTime)
     {
+        Character.Velocity = Vector3.zero;
         base.CustomUpdate(deltaTime);
 
     }
