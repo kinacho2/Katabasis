@@ -18,7 +18,7 @@ public abstract class CharacterState : MonoBehaviour, IState
 
     [SerializeField] protected CharacterState Hurt;
 
-    [SerializeField] protected Statistics Statistics;
+    [SerializeField] public Statistics Statistics;
 
     public virtual void Init(Character character)
     {
@@ -99,7 +99,7 @@ public abstract class CharacterState : MonoBehaviour, IState
         Character.Velocity = vel;
     }
 
-    public virtual bool Damage(Vector3 position)
+    public virtual bool Damage(Vector3 position, Vector2 Retroceso)
     {
         Character.Direction = new Vector2(
             

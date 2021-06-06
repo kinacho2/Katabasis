@@ -8,5 +8,5 @@ public interface IState
     void StateExit();
     void EndState();
     void CustomUpdate(float deltaTime);
-    bool Damage(Vector3 position);
+    bool Damage(Vector3 position, Vector2 Retroceso);
 }

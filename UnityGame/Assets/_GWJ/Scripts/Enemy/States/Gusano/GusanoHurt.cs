@@ -10,7 +10,7 @@ public class GusanoHurt : EnemyState
         base.StateEnter(prevState);
         Enemy.Direction = Vector3.zero;
     }
-    public override bool Damage(Vector3 position)
+    public override bool Damage(Vector3 position, Vector2 Retroceso)
     {
         Enemy.Direction = new Vector3(
             Mathf.Sign( transform.position.x - position.x ) * retroceso.x,

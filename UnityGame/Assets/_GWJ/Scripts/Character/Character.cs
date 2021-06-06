@@ -45,13 +45,13 @@ public class Character : Entity
         }
         Rigidbody.velocity = Vector2.zero;
     }
-    public override bool Hurt(float value, Vector3 position)
+    public override bool Hurt(float value, Vector3 position, Vector2 Retroceso)
     {
         if (!InvulnerabilityState.Invulnerability)
         {
-            InvulnerabilityState.Invulnerability = State.Damage(position);
+            InvulnerabilityState.Invulnerability = State.Damage(position, Retroceso);
             if (InvulnerabilityState.Invulnerability)
-                return base.Hurt(value, position);
+                return base.Hurt(value, position, Retroceso);
         }
         return false;
         

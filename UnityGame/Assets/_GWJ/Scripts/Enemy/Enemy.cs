@@ -41,7 +41,7 @@ public class Enemy : Entity
 
         if (Character)
         {
-            Character.Hurt(damage, transform.position);
+            Character.Hurt(damage, transform.position, Vector2.zero);
         }
     }
 
@@ -52,9 +52,9 @@ public class Enemy : Entity
         State.Move(Time.fixedDeltaTime);
     }
 
-    public override bool Hurt(float value, Vector3 position)
+    public override bool Hurt(float value, Vector3 position, Vector2 Retroceso)
     {
-        return State.Damage(position);
+        return State.Damage(position, Retroceso);
     }
 
     private void Update()

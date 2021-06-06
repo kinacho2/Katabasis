@@ -6,7 +6,7 @@ public class Entity : MonoBehaviour
 {
     public Stats Stats;
 
-    public virtual bool Hurt(float value, Vector3 position)
+    public virtual bool Hurt(float value, Vector3 position, Vector2 Retroceso)
     {
         Stats.Life -= value;
         return true;

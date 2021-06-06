@@ -10,5 +10,5 @@ public class Statistics : MonoBehaviour
     public float Gravity;
     public float JumpAcceleration;
     public float JumpHeight;
-
+    public Vector2 Retroceso;
 }

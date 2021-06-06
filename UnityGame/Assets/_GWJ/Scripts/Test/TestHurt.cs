@@ -10,7 +10,7 @@ public class TestHurt : MonoBehaviour
         var character = collision.GetComponent<Character>();
         if (character)
         {
-            character.Hurt(1, transform.position);
+            character.Hurt(1, transform.position, Vector2.zero);
         }
     }
 

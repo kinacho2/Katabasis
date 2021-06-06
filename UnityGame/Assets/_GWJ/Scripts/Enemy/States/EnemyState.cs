@@ -59,9 +59,10 @@ public class EnemyState : MonoBehaviour, IState
 
     }
 
-    public virtual bool Damage(Vector3 position)
+    public virtual bool Damage(Vector3 position, Vector2 Retroceso)
     {
         Enemy.ChangeState(Hurt);
-        return Hurt.Damage(position);
+        return Hurt.Damage(position, Retroceso);
     }
+
 }
