@@ -35,8 +35,8 @@ public class SlideText : MonoBehaviour
         var offsetMax = MovePanel.offsetMax;
         var offsetMin = MovePanel.offsetMin;
 
-        offsetMax.y = InitRef + height;
-        offsetMin.y = InitRef;
+        offsetMax.y = -InitRef;
+        offsetMin.y = -InitRef - height;
 
         MovePanel.offsetMax = offsetMax;
         MovePanel.offsetMin = offsetMin;
@@ -48,7 +48,7 @@ public class SlideText : MonoBehaviour
     private void FixedUpdate()
     {
         if (!moving) return;
-        if(MovePanel.offsetMin.y > -height - EndRef)
+        if(MovePanel.offsetMin.y < EndRef)
         {
             var offsetMax = MovePanel.offsetMax;
             var offsetMin = MovePanel.offsetMin;
@@ -62,7 +62,7 @@ public class SlideText : MonoBehaviour
         else
         {
             moving = false;
-            
+            GameManager.Instance.InitHub();
         }
     }
 
