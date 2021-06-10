@@ -45,6 +45,12 @@ public class Character : Entity
         }
         Rigidbody.velocity = Vector2.zero;
     }
+
+    internal void Death()
+    {
+        throw new NotImplementedException();
+    }
+
     public override bool Hurt(float value, Vector3 position, Vector2 Retroceso)
     {
         if (!InvulnerabilityState.Invulnerability)
