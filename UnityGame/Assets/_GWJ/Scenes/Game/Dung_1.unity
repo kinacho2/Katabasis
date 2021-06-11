@@ -1133,6 +1133,7 @@ MonoBehaviour:
   - {fileID: 1454626641}
   - {fileID: 1515449113}
   Prefab: {fileID: 8983911190114422848, guid: 2e78485af23ecce4aa3dbe3987f43985, type: 3}
+  Enemies: []
 --- !u!114 &1515449113 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5551070317614239054, guid: e990e70a3ea371b4eaa1bea58bb9c64e, type: 3}
