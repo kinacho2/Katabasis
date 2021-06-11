@@ -5,11 +5,11 @@ using UnityEngine;
 public class Hurt : GroundedState
 {
 
-
-
     [SerializeField] float StuntTime = 1;
     [SerializeField] Vector2 retroceso;
-    
+
+    [SerializeField] CharacterState Death;
+
     public override void StateEnter(IState prevState)
     {
         prevState.EndState();
@@ -32,4 +32,15 @@ public class Hurt : GroundedState
             EndState();
     }
 
+    public override void EndState()
+    {
+        if (Character.Dead)
+        {
+            Character.ChangeState(Death);
+        }
+        else
+        {
+            base.EndState();
+        }
+    }
 }

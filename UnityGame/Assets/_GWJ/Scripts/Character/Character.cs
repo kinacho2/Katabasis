@@ -20,6 +20,13 @@ public class Character : Entity
     [SerializeField] public CharacterState State;
     [SerializeField] public Statistics Statistics;
 
+     
+    public bool Dead { get; protected set; }
+
+    private void Start()
+    {
+        Dead = false;
+    }
 
     public void ChangeState(CharacterState st)
     {
@@ -48,13 +55,15 @@ public class Character : Entity
 
     internal void Death()
     {
-        throw new NotImplementedException();
+        Dead = true;
     }
 
     public override bool Hurt(float value, Vector3 position, Vector2 Retroceso)
     {
         if (!InvulnerabilityState.Invulnerability)
         {
+            if (GameManager.Instance)
+                GameManager.Instance.Damage(this);
             InvulnerabilityState.Invulnerability = State.Damage(position, Retroceso);
             if (InvulnerabilityState.Invulnerability)
                 return base.Hurt(value, position, Retroceso);
@@ -64,6 +73,7 @@ public class Character : Entity
     }
     private void Update()
     {
+        if (Dead) return;
         if (Joystick.inputReader.Stick.x > 0)
         {
             //Renderer.flipX = false;

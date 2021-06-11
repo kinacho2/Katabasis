@@ -5,6 +5,7 @@ using UnityEngine;
 public class AirHurt : CharacterState
 {
     [SerializeField] Vector2 retroceso;
+    [SerializeField] CharacterState Death;
 
 
     public override void StateEnter(IState prevState)
@@ -25,5 +26,15 @@ public class AirHurt : CharacterState
         if (Character.Collider.Bottom)
             EndState();
     }
-
+    public override void EndState()
+    {
+        if (Character.Dead)
+        {
+            Character.ChangeState(Death);
+        }
+        else
+        {
+            base.EndState();
+        }
+    }
 }

@@ -52,7 +52,6 @@ public class GameManager : MonoBehaviour
         {
             character.Death();
         }
-        Death();
     }
 
     public void Death()
