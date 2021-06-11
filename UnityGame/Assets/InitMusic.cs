@@ -7,7 +7,8 @@ public class InitMusic : MonoBehaviour
     [SerializeField] AudioClip MenuMusic;
     void Start()
     {
-        SoundManager.Instance.ChangeMusic(MenuMusic, .1f, true, false);
+        if (SoundManager.Instance.CurrentMusic.clip != MenuMusic)
+            SoundManager.Instance.ChangeMusic(MenuMusic, .1f, true, false);
     }
 
 }

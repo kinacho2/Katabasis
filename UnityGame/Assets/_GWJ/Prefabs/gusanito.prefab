@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   End: {fileID: 8983911189177609910}
   Hurt: {fileID: 8983911189835810457}
+  SoundData: {fileID: 0}
 --- !u!1 &8983911188835487872
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   End: {fileID: 8983911189177609910}
   Hurt: {fileID: 8983911189835810457}
+  SoundData: {fileID: 0}
 --- !u!1 &8983911189191158528
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,6 +605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   End: {fileID: 8983911188609135010}
   Hurt: {fileID: 8983911189835810457}
+  SoundData: {fileID: 11400000, guid: 449f8f79b4a9e674d956d709271c2607, type: 2}
   AttackForce: {x: 1, y: 1, z: 0}
 --- !u!1 &8983911189236925908
 GameObject:
@@ -1036,6 +1039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   End: {fileID: 8983911188609135010}
   Hurt: {fileID: 8983911189835810457}
+  SoundData: {fileID: 11400000, guid: 58679bf286af45e4c8a223c2a37d79ac, type: 2}
   retroceso: {x: 1, y: 1}
 --- !u!1 &8983911189927436862
 GameObject:
@@ -1255,6 +1259,7 @@ MonoBehaviour:
   Rigidbody: {fileID: 8983911190114422850}
   Animator: {fileID: 8983911190114422853}
   Renderer: {fileID: 8983911190114422878}
+  lifes: 0
   State: {fileID: 8983911189177609910}
   Statistics: {fileID: 0}
 --- !u!61 &8983911190114422851

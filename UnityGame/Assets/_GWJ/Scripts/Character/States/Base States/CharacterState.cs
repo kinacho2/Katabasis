@@ -20,6 +20,8 @@ public abstract class CharacterState : MonoBehaviour, IState
 
     [SerializeField] public Statistics Statistics;
 
+    [SerializeField] SoundData SoundData;
+
     public virtual void Init(Character character)
     {
         Character = character;
@@ -43,7 +45,8 @@ public abstract class CharacterState : MonoBehaviour, IState
         if (prevState != null)
             prevState.StateExit();
         Character.Animator.SetTrigger(AnimatorTrigger);
-        
+        if (SoundData)
+            SoundManager.Instance.PlayEffect(SoundData.GetRandom());
 
     }
 

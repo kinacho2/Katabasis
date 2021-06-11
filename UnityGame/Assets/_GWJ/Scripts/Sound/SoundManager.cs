@@ -26,7 +26,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioSource Music1;
     [SerializeField] AudioSource Music2;
 
-    AudioSource CurrentMusic;
+    public AudioSource CurrentMusic;
 
     int _index = 0;
 

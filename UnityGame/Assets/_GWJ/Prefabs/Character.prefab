@@ -237,6 +237,7 @@ MonoBehaviour:
   Attack: {fileID: 1600713096}
   Hurt: {fileID: 1600713096}
   Statistics: {fileID: 3833840557798398124}
+  SoundData: {fileID: 11400000, guid: 618a17878e608b84ca174f2cf3a61a43, type: 2}
   timeDead: 5
 --- !u!1 &1643507652
 GameObject:
@@ -393,6 +394,7 @@ MonoBehaviour:
   Attack: {fileID: 3833840556941586784}
   Hurt: {fileID: 3833840556941586784}
   Statistics: {fileID: 4878550527197040353}
+  SoundData: {fileID: 11400000, guid: afe3a38f0cf3c1b41b65125dcafa51ff, type: 2}
 --- !u!1 &3833840557041560771
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,6 +446,7 @@ MonoBehaviour:
   Attack: {fileID: 0}
   Hurt: {fileID: 3833840557143594051}
   Statistics: {fileID: 0}
+  SoundData: {fileID: 0}
 --- !u!1 &3833840557143594049
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,6 +498,7 @@ MonoBehaviour:
   Attack: {fileID: 3833840557143594051}
   Hurt: {fileID: 3833840557143594051}
   Statistics: {fileID: 3833840558416383127}
+  SoundData: {fileID: 11400000, guid: dd3e347dbbbc7824ca5c565f45e5b434, type: 2}
   StuntTime: 0.25
   retroceso: {x: 3, y: 1}
   Death: {fileID: 1600713096}
@@ -722,6 +726,7 @@ MonoBehaviour:
   Attack: {fileID: 3833840557917570347}
   Hurt: {fileID: 3833840557143594051}
   Statistics: {fileID: 3833840558416383127}
+  SoundData: {fileID: 0}
   EndMoveFriction: 20
 --- !u!1 &3833840557397893610
 GameObject:
@@ -952,6 +957,7 @@ MonoBehaviour:
   Attack: {fileID: 3833840557581562330}
   Hurt: {fileID: 3833840557581562330}
   Statistics: {fileID: 3833840558882847735}
+  SoundData: {fileID: 0}
   AnimatorEvent: {fileID: 3833840558536674133}
   List:
   - {fileID: 3833840557983864949}
@@ -1182,6 +1188,7 @@ MonoBehaviour:
   Attack: {fileID: 3833840557767493330}
   Hurt: {fileID: 3833840557767493330}
   Statistics: {fileID: 1857590655225995928}
+  SoundData: {fileID: 11400000, guid: 002cf85ad4818b24d8057eae01f1672a, type: 2}
 --- !u!1 &3833840557798398131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,6 +1375,7 @@ MonoBehaviour:
   Attack: {fileID: 3833840557917570347}
   Hurt: {fileID: 3833840557917570347}
   Statistics: {fileID: 3833840557798398124}
+  SoundData: {fileID: 0}
   AnimatorEvent: {fileID: 3833840558536674133}
   List:
   - {fileID: 3833840557966825594}
@@ -1426,6 +1434,7 @@ MonoBehaviour:
   Attack: {fileID: 3833840557966825594}
   Hurt: {fileID: 3833840557966825594}
   Statistics: {fileID: 292748224639875792}
+  SoundData: {fileID: 11400000, guid: 2dd28f4f1cd30044eaec3cf5d5ea174a, type: 2}
 --- !u!1 &3833840557977195129
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,6 +1486,7 @@ MonoBehaviour:
   Attack: {fileID: 3833840557977195130}
   Hurt: {fileID: 3833840558414405103}
   Statistics: {fileID: 3833840558882847735}
+  SoundData: {fileID: 0}
   EndMoveFriction: 0
 --- !u!1 &3833840557983864955
 GameObject:
@@ -1529,6 +1539,7 @@ MonoBehaviour:
   Attack: {fileID: 3833840557983864949}
   Hurt: {fileID: 3833840558414405103}
   Statistics: {fileID: 3833840557798398124}
+  SoundData: {fileID: 11400000, guid: 2dd28f4f1cd30044eaec3cf5d5ea174a, type: 2}
 --- !u!1 &3833840557984623466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1674,6 +1685,7 @@ MonoBehaviour:
   Attack: {fileID: 3833840557581562330}
   Hurt: {fileID: 3833840558414405103}
   Statistics: {fileID: 3833840558512388581}
+  SoundData: {fileID: 11400000, guid: 4fe446337a74fdd4dac2d82972033152, type: 2}
   V0: 0
   jumping: 0
   distance: 0
@@ -1728,6 +1740,7 @@ MonoBehaviour:
   Attack: {fileID: 3833840558414405103}
   Hurt: {fileID: 3833840558414405103}
   Statistics: {fileID: 3833840558882847735}
+  SoundData: {fileID: 11400000, guid: dd3e347dbbbc7824ca5c565f45e5b434, type: 2}
   retroceso: {x: 3, y: 1}
   Death: {fileID: 1600713096}
 --- !u!1 &3833840558416383125
@@ -1827,8 +1840,8 @@ MonoBehaviour:
   Acceleration: 10
   Friction: 3
   Gravity: 0
-  JumpAcceleration: 1.7
-  JumpHeight: 0.15
+  JumpAcceleration: 0.7
+  JumpHeight: 1.15
   Retroceso: {x: 0, y: 0}
 --- !u!1 &3833840558536674141
 GameObject:
@@ -2105,6 +2118,7 @@ MonoBehaviour:
   Attack: {fileID: 3833840557917570347}
   Hurt: {fileID: 3833840557143594051}
   Statistics: {fileID: 3833840557798398124}
+  SoundData: {fileID: 0}
 --- !u!1 &3833840558812372402
 GameObject:
   m_ObjectHideFlags: 0
@@ -2381,6 +2395,7 @@ MonoBehaviour:
   Attack: {fileID: 3833840557581562330}
   Hurt: {fileID: 3833840558414405103}
   Statistics: {fileID: 3833840558882847735}
+  SoundData: {fileID: 0}
   EndMoveFriction: 20
 --- !u!1 &3964901831383085530
 GameObject:

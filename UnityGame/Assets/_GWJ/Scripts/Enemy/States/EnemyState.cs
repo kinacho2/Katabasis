@@ -10,6 +10,7 @@ public class EnemyState : MonoBehaviour, IState
 
     [SerializeField] EnemyState End;
     [SerializeField] EnemyState Hurt;
+    [SerializeField] SoundData SoundData;
     public virtual void Init(Enemy enemy)
     {
         Enemy = enemy;
@@ -40,10 +41,12 @@ public class EnemyState : MonoBehaviour, IState
 
     public virtual void StateEnter(IState prevState)
     {
+        if (SoundData)
+            SoundManager.Instance.PlayEffect(SoundData.GetRandom());
         PrevState = prevState;
         if (prevState != null)
             prevState.StateExit();
-
+       
     }
 
 

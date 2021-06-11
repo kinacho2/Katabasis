@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        int count = Mathf.Clamp(GameManager.Instance.Dungeons * 28 * 2 + 7, 7, 28);
+        int count = Mathf.Clamp(GameManager.Instance.Dungeons * 4 + 7, 7, 28);
         int j = 4;
         Enemies = new List<Enemy>();
         for (int i=0; i<count; i++)
