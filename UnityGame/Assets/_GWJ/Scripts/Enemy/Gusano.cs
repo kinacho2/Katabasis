@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Gusano : Enemy
 {
+    private void Start()
+    {
+        lifes = 2;
+    }
 
-    
 
 }

@@ -186,6 +186,58 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3738851, y: 0.11357436}
   m_EdgeRadius: 0
+--- !u!1 &1600713094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1600713095}
+  - component: {fileID: 1600713096}
+  m_Layer: 0
+  m_Name: DeadState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1600713095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600713094}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3833840557357642464}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1600713096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600713094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463b54f759fc0f84a8ec0df947c829f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimatorTrigger: Death
+  End: {fileID: 1600713096}
+  Move: {fileID: 1600713096}
+  Jump: {fileID: 1600713096}
+  Roll: {fileID: 1600713096}
+  Attack: {fileID: 1600713096}
+  Hurt: {fileID: 1600713096}
+  Statistics: {fileID: 3833840557798398124}
+  timeDead: 5
 --- !u!1 &1643507652
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,13 +263,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643507652}
-  m_LocalRotation: {x: 0, y: 0, z: 0.24767546, w: 0.9688431}
+  m_LocalRotation: {x: 0, y: 0, z: -0.008726465, w: 0.999962}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3833840558536674143}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 28.68}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1}
 --- !u!61 &1643507655
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -231,7 +283,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.22057222, y: -0.080037385}
+  m_Offset: {x: 0.0038958872, y: -0.12184771}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -242,7 +294,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.17908493, y: 0.05081916}
+  m_Size: {x: 0.06303069, y: 0.13443981}
   m_EdgeRadius: 0
 --- !u!114 &1643507654
 MonoBehaviour:
@@ -445,6 +497,7 @@ MonoBehaviour:
   Statistics: {fileID: 3833840558416383127}
   StuntTime: 0.25
   retroceso: {x: 3, y: 1}
+  Death: {fileID: 1600713096}
 --- !u!1 &3833840557357642471
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,6 +526,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3833840557871257958}
+  - {fileID: 1600713095}
   m_Father: {fileID: 3833840558536674143}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1221,10 +1275,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17d15d5ad1fdb741bf69bc9d06b7562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: {x: 2, y: 7}
+  Speed: {x: 3.5, y: 7}
   Acceleration: 200
   Friction: 0
-  Gravity: 10
+  Gravity: 16
   JumpAcceleration: 9.8
   JumpHeight: 5
   Retroceso: {x: 0, y: 0}
@@ -1675,6 +1729,7 @@ MonoBehaviour:
   Hurt: {fileID: 3833840558414405103}
   Statistics: {fileID: 3833840558882847735}
   retroceso: {x: 3, y: 1}
+  Death: {fileID: 1600713096}
 --- !u!1 &3833840558416383125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,12 +1823,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17d15d5ad1fdb741bf69bc9d06b7562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: {x: 3, y: 10}
+  Speed: {x: 3, y: 7}
   Acceleration: 10
   Friction: 3
   Gravity: 0
-  JumpAcceleration: 0.5
-  JumpHeight: 1
+  JumpAcceleration: 1.7
+  JumpHeight: 0.15
   Retroceso: {x: 0, y: 0}
 --- !u!1 &3833840558536674141
 GameObject:
@@ -2268,11 +2323,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17d15d5ad1fdb741bf69bc9d06b7562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: {x: 2, y: 10}
+  Speed: {x: 2, y: 5}
   Acceleration: 20
-  Friction: 3
+  Friction: 5
   Gravity: 0
-  JumpAcceleration: 10
+  JumpAcceleration: 5
   JumpHeight: 1.6
   Retroceso: {x: 0, y: 0}
 --- !u!1 &3833840558889890977

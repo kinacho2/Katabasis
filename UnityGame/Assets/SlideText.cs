@@ -10,6 +10,9 @@ public class SlideText : MonoBehaviour
 
     [SerializeField] float speed = 100;
 
+    float LowSpeed;
+    float MaxSpeed;
+
     [SerializeField] float heightRef;
     [SerializeField] float height;
 
@@ -19,8 +22,13 @@ public class SlideText : MonoBehaviour
     [SerializeField] RectTransform EndRefTransform;
     [SerializeField] int count;
 
+    [SerializeField] public CharacterInput Joystick;
+
+
     private void Awake()
     {
+        LowSpeed = speed;
+        MaxSpeed = speed * 10;
         TextField.text = Text.text;
 
         InitRef = Mathf.Abs(InitRefTransform.offsetMax.y);
@@ -48,6 +56,16 @@ public class SlideText : MonoBehaviour
     private void FixedUpdate()
     {
         if (!moving) return;
+
+        if (Joystick.inputReader.Jumping)
+        {
+            speed = MaxSpeed;
+        }
+        else
+        {
+            speed = LowSpeed;
+        }
+
         if(MovePanel.offsetMin.y < EndRef)
         {
             var offsetMax = MovePanel.offsetMax;

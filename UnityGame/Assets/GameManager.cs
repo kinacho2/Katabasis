@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; protected set; }
 
     public int Lifes { get; protected set; }
+    public int Dungeons { get; protected set; }
     public int Deaths { get; protected set; }
 
     private void Awake()
@@ -45,6 +46,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Hub");
     }
 
+    public void InitDungeon()
+    {
+        SceneManager.LoadScene("Dung_1");
+
+    }
+
     public void Damage(Character character)
     {
         Lifes--;
@@ -58,6 +65,12 @@ public class GameManager : MonoBehaviour
     {
         Deaths++;
         Lifes = MaxLife;
-        SceneManager.LoadScene("Hub");
+        InitHub();
+    }
+
+    public void EndDungeon()
+    {
+        Dungeons++;
+        InitDungeon();
     }
 }

@@ -16,6 +16,8 @@ public class Enemy : Entity
     [SerializeField] public Animator Animator;
     [SerializeField] public SpriteRenderer Renderer;
 
+    [SerializeField] public int lifes;
+
     internal void Attack(Character character)
     {
         
@@ -54,6 +56,10 @@ public class Enemy : Entity
 
     public override bool Hurt(float value, Vector3 position, Vector2 Retroceso)
     {
+        int v = (int)value;
+        lifes -= v;
+        if (lifes <= 0)
+            Destroy(gameObject);
         return State.Damage(position, Retroceso);
     }
 

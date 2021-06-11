@@ -22,12 +22,12 @@ public class DeadState : GroundedState
 
     public override void StateEnter(IState prevState)
     {
-        Character.Velocity = Vector3.zero;
+        //Character.Velocity = Vector3.zero;
         base.StateEnter(prevState);
     }
 
     public override void UpdateMove(float deltaTime)
     {
-
+        base.UpdateMove(deltaTime);
     }
 }

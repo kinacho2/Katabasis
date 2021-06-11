@@ -29,6 +29,11 @@ public class SpawnPlayer : MonoBehaviour
         {
             RespawnPlayer(character);
         }
+        var Enemy = collision.GetComponent<Enemy>();
+        if (Enemy)
+        {
+            Destroy(Enemy.gameObject);
+        }
     }
 
 }
