@@ -58,8 +58,9 @@ public class Move : GroundedState
 
     public override void EndState()
     {
-        base.EndState();
         Statistics.Friction = MoveFriction;
-        Character.ChangeState(End);
+
+        base.EndState();
+
     }
 }
